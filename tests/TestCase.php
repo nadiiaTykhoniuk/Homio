@@ -11,7 +11,5 @@ abstract class TestCase extends BaseTestCase
     public function setUp(): void
     {
         parent::setUp();
-
-        //$this->artisan('db:seed');
     }
 }

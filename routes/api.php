@@ -24,4 +24,5 @@ Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login'])->n
 
 Route::group(['middleware' => 'api'], function ($router) {
     Route::resource('requests', \App\Http\Controllers\RequestsController::class);
+    Route::resource('refugees', \App\Http\Controllers\RefugeesController::class);
 });
