@@ -14,14 +14,14 @@ class RefugeesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api');
+        //$this->middleware('auth:api');
     }
 
     public function index(\Illuminate\Http\Request $request)
     {
-        if (!auth()->user()->hasRole('admin')) {
-            return \Illuminate\Auth\Access\Response::deny('You cannot view refugees', 403);
-        }
+//        if (!auth()->user()->hasRole('admin')) {
+//            return \Illuminate\Auth\Access\Response::deny('You cannot view refugees', 403);
+//        }
 
         $refugees = User::whereHas('roles', function (Builder $query) {
             $query->where('name', 'refugee');
